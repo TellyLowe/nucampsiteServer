@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const Campsite = require('../models/campsite');
-const { response } = require('../app');
 
 const campsiteRouter = express.Router();
 
