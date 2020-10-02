@@ -179,7 +179,7 @@ campsiteRouter.route('/:campsiteId/comments/:commentId')
                         if (req.body.text) {
                             campsite.comments.id(req.params.commentId).text = req.body.text;
                         }
-                        if (req.body.name) { }
+                        if (req.body.name) 
                         campsite.save()
                             .then(campsite => {
                                 res.statusCode = 200;
