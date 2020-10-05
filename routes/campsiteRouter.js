@@ -1,9 +1,11 @@
 const express = require('express');
 const Campsite = require('../models/campsite');
+const bodyParser = require('body-parser');
 const authenticate = require('../authenticate');
 const cors = require('./cors');
 
 const campsiteRouter = express.Router();
+campsiteRouter.use(bodyParser.json());
 
 campsiteRouter.route('/')
     .options(cors.corsWithOptions, (req, res) => res.sendStatus(200))

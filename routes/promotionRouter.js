@@ -1,8 +1,11 @@
 const express = require('express');
 const Promotion = require('../models/promotion');
+const bodyParser = require('body-parser');
 const authenticate = require('../authenticate');
 const cors = require('./cors');
 const promotionRouter = express.Router();
+
+promotionRouter.use(bodyParser.json());
 
 promotionRouter.route('/')
 .options(cors.corsWithOptions, (req, res) => res.sendStatus(200))
